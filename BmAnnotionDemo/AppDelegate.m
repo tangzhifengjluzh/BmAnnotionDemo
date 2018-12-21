@@ -7,16 +7,36 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+/*百度地图*/
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+{
+    //    UIWindow *window;
+    //    UINavigationController *navigationController;
+    BMKMapManager* _mapManager;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    _mapManager = [[BMKMapManager alloc]init];
+#warning 1，百度key换成自己的，2，应用名及bundle id自己的就可以运行了。
+    BOOL ret = [_mapManager start:@"换成自己项目申请的有效key" generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController: [[ViewController alloc]init]];
     return YES;
 }
 
