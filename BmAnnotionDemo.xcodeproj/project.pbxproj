@@ -580,7 +580,7 @@
 					"$(PROJECT_DIR)/BmAnnotionDemo/Vendor/BaiduMap_IOSSDK_v3.3.2_Lib",
 					"$(PROJECT_DIR)/BmAnnotionDemo/Vendor/BaiduMapKit/BaiduMapKit",
 				);
-				GCC_PREFIX_HEADER = /Users/mac/Desktop/BmAnnotionDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BmAnnotionDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -614,7 +614,7 @@
 					"$(PROJECT_DIR)/BmAnnotionDemo/Vendor/BaiduMap_IOSSDK_v3.3.2_Lib",
 					"$(PROJECT_DIR)/BmAnnotionDemo/Vendor/BaiduMapKit/BaiduMapKit",
 				);
-				GCC_PREFIX_HEADER = /Users/mac/Desktop/BmAnnotionDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = BmAnnotionDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
