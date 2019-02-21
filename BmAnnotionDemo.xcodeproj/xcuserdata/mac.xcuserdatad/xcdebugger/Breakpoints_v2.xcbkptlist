@@ -292,11 +292,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BmAnnotionDemo/ViewController.m"
-            timestampString = "567054055.902493"
+            timestampString = "572431058.811357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -308,11 +308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BmAnnotionDemo/ViewController.m"
-            timestampString = "567054055.902855"
+            timestampString = "572431058.811425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>

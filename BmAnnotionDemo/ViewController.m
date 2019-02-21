@@ -7,14 +7,6 @@
 //
 
 #import "ViewController.h"
-
-//
-//  RRExtraUrgentViewController.m
-//  RRSTCOURIER
-//
-//  Created by mac on 2018/12/6.
-//  Copyright © 2018 YANGGQ. All rights reserved.
-//
 /*百度地图*/
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 #import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
@@ -89,10 +81,7 @@
 {
     [_mapView updateLocationData:userLocation];
     
-//    KMLog(@"heading is %@",userLocation.heading);
     _mapView.centerCoordinate = userLocation.location.coordinate;
-//    self.viewModel.coordinate = [NSString stringWithFormat:@"%f,%f",userLocation.location.coordinate.longitude,userLocation.location.coordinate.latitude];
-//    [self.viewModel.getNearbyExpressComand execute:nil];
     [_locService stopUserLocationService];
 }
 
@@ -100,17 +89,9 @@
 - (void)initmap{
     //百度地图
     _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 88, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height )];
-    //    [self.rrMapView insertSubview:_mapView belowSubview:_rrAnnotionView];
     [self.view addSubview:_mapView];
-    
-    //    [_mapView addSubview:_labelNoti];
-    //    [_mapView addSubview:_locationimage];
     BMKLocationViewDisplayParam *displayParam = [[BMKLocationViewDisplayParam alloc]init];
-    //    displayParam.isRotateAngleValid = false;//跟随态旋转角度是否生效
     displayParam.isAccuracyCircleShow = false;//精度圈是否显示
-    //    displayParam.locationViewImgName= @"icon";//定位图标名称
-    //    displayParam.locationViewOffsetX = 0;//定位偏移量(经度)
-    //    displayParam.locationViewOffsetY = 0;//定位偏移量（纬度）
     [_mapView updateLocationViewWithParam:displayParam];
     _mapView.delegate = self;
     _mapView.showsUserLocation = YES;
@@ -125,10 +106,6 @@
     [self.view addSubview:buttonlocation];
     buttonlocation.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
     buttonlocation.frame = CGRectMake(5, 500, 30, 30);
-//    buttonlocation.sd_layout.leftSpaceToView(self.view, 5).bottomSpaceToView(self.viewbottom, 35).widthIs(30).heightEqualToWidth();
-//    [[buttonlocation rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-//
-//    }];
     [buttonlocation addTarget:self action:@selector(location) forControlEvents:UIControlEventTouchUpInside];
 }
 //刷新定位或刷新网络数据
